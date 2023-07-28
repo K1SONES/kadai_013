@@ -16,9 +16,9 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body style="padding: 60px 0;">
     <div id="app">
-        
+        @include('layouts.header')
 
         <main class="py-4">
             @yield('content')
