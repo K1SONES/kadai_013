@@ -19,44 +19,12 @@ class GoalController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Goal  $goal
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Goal $goal)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Goal  $goal
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Goal $goal)
     {
         //
     }
