@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Goal;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GoalController extends Controller
 {
@@ -15,7 +16,9 @@ class GoalController extends Controller
      */
     public function index()
     {
-        //
+        $goals = Auth::user()->goals;
+
+        return view('goals.index', compact('goals'));
     }
 
     /**
