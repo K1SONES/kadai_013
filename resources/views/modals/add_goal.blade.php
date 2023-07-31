@@ -5,7 +5,7 @@
                 <h5 class="modal-title" id="addGoalModalLabel">目標の追加</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
             </div>
-            <form action="{{ route('goals.sotre') }}" method="post">
+            <form action="{{ route('goals.store') }}" method="post">
                 @scrf
                 <div class="modal-body">
                     <input type="text" class="form-control" name="title">
