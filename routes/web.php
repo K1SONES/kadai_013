@@ -1,7 +1,9 @@
 <?php
 
+
+
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\GoalController;
+use App\Http\Controllers\GoalController;
 
 /*
 |--------------------------------------------------------------------------
