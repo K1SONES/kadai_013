@@ -29,8 +29,17 @@ class GoalController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'title' => 'required',
+        ]);
+
+        $goal = new Goal();
+        $goal->title = $request->input('title');
+        $goal->user_id = Auth::id();
+        $goal->save;
+
+        return redirect()->route('goals.index');
+        }
 
     /**
      * Update the specified resource in storage.
@@ -41,7 +50,15 @@ class GoalController extends Controller
      */
     public function update(Request $request, Goal $goal)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+        ]);
+
+        $goal->title = $request->input('title');
+        $goal->user_id = Auth::id();
+        $goal->save;
+
+        return redirect()->route('goals.index');
     }
 
     /**
@@ -52,6 +69,8 @@ class GoalController extends Controller
      */
     public function destroy(Goal $goal)
     {
-        //
+        $goal->delete();
+
+        return redirect()->route('goals.index');
     }
 }
