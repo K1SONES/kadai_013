@@ -18,7 +18,7 @@
         <div class="d-flex mb-3">
             <a href="#" class="link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#addGoalModal">
                 <div class="d-flex align-items-center">
-                    <span class="fs5 fw-bold">+</span>&nbsp;目標の追加
+                    <span class="fs-5 fw-bold">+</span>&nbsp;目標の追加
                 </div>
             </a>
         </div>
