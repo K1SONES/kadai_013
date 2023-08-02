@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
             </div>
             <form action="{{ route('goals.store') }}" method="post">
-                @scrf
+                @csrf
                 <div class="modal-body">
                     <input type="text" class="form-control" name="title">
                 </div>
