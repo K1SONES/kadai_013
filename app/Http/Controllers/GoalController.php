@@ -36,7 +36,7 @@ class GoalController extends Controller
         $goal = new Goal();
         $goal->title = $request->input('title');
         $goal->user_id = Auth::id();
-        $goal->save;
+        $goal->save();
 
         return redirect()->route('goals.index');
         }
