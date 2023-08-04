@@ -41,9 +41,19 @@ class TodoController extends Controller
      * @param  \App\Models\Todo  $todo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Todo $todo)
+    public function update(Request $request, Goal $goal, Todo $todo)
     {
-        //
+        $request->validate([
+            'content' => 'required'
+        ]);
+
+        $todo->content = $request->input('content');
+        $todo->user_id = Auth::id();
+        $todo->goal_id = goal->id;
+        $todo->done = $request->boolean('done', $todo->done);
+        $todo->save();
+
+        return redirect()->route('goal.index');
     }
 
     /**
