@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
+use App\Models\Goal;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TodoController extends Controller
 {
@@ -15,9 +17,21 @@ class TodoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+    public function store(Request $request, Goal $goal)
     {
-        //
+        $request->validate([
+            'content' => 'required'
+        ]);
+
+        $todo = new Todo();
+        $todo->content = $request->input('content');
+        $todo->user_id = Auth::id();
+        $todo->goal_id = $goal->id;
+        $todo->done = false;
+        $todo->save();
+
+        return redirect()->route('goals.index');
     }
 
     /**
