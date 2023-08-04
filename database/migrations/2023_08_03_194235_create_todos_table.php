@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
+            $table->text('content');
+            $table->foreignID('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignID('goal_id')->constrained()->cascadeOnDelete();
+            $table->boolean('done')->default(false);
             $table->timestamps();
         });
     }
