@@ -62,8 +62,10 @@ class TodoController extends Controller
      * @param  \App\Models\Todo  $todo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Todo $todo)
+    public function destroy(Goal $goal, Todo $todo)
     {
-        //
+        $todo->delete();
+
+        return redirect()->route('goal.index');
     }
 }
