@@ -1,8 +1,4 @@
-けるGoalモデルのインスタンス（$goal）を渡します。
-
-add_todo.blade.php
-
- <div class="modal fade" id="addTodoModal{{ $goal->id }}" tabindex="-1" aria-labelledby="addTodoModalLabel{{ $goal->id }}">
+<div class="modal fade" id="addTodoModal{{ $goal->id }}" tabindex="-1" aria-labelledby="addTodoModalLabel{{ $goal->id }}">
      <div class="modal-dialog">
          <div class="modal-content">
              <div class="modal-header">
