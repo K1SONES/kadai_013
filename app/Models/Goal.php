@@ -13,7 +13,7 @@ class Goal extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function goal() {
+    public function todos() {
         return $this->hasMany(Todo::class);
     }
 }
