@@ -53,7 +53,7 @@ class TodoController extends Controller
         $todo->done = $request->boolean('done', $todo->done);
         $todo->save();
 
-        return redirect()->route('goal.index');
+        return redirect()->route('goals.index');
     }
 
     /**
@@ -66,6 +66,6 @@ class TodoController extends Controller
     {
         $todo->delete();
 
-        return redirect()->route('goal.index');
+        return redirect()->route('goals.index');
     }
 }
