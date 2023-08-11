@@ -23,11 +23,11 @@ class TagController extends Controller
         ]);
 
         $tag = new Tag();
-        $tag->name $request->input('name');
+        $tag->name = $request->input('name');
         $tag->user_id = Auth::id();
         $tag->save();
 
-        return redirect()->route('goal.index');
+        return redirect()->route('goals.index');
     }
 
     /**
@@ -58,6 +58,6 @@ class TagController extends Controller
     {
         $tag->delete();
 
-        return redirect()->route('goal.index');
+        return redirect()->route('goals.index');
     }
 }
