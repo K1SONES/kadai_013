@@ -24,7 +24,7 @@
                     <span class="fs-5 fw-bold">＋</span>&nbsp;目標の追加
                 </div>
             </a>
-            <a href="#" class="ms-4 link-dark text-decoration-none" date-bs-toggle="modal" date-bs-target="#addTagModal">
+            <a href="#" class="ms-4 link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#addTagModal">
                 <div class="d-flex align-items-center">
                     <span class="fs-5 fw-bold">＋</span>&nbsp;タグの追加
                 </div>
