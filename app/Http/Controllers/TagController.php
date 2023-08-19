@@ -39,13 +39,15 @@ class TagController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
-        $request->valedate([
+        $request->validate([
             'name' => 'required',
         ]);
 
         $tag->name = $request->input('name');
         $tag->user_id = Auth::id();
         $tag->save();
+
+        return redirect()->route('goals.index');
     }
 
     /**
